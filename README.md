@@ -1,16 +1,51 @@
-# React + Vite
+# Task Manager (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple task manager built with React. Tasks are saved in the browser, so they are still there after a refresh.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add tasks (empty input is ignored)
+- Edit a task inline (Enter to save, Escape to cancel)
+- Delete tasks
+- Mark tasks as completed
+- Filter by All / Active / Completed
+- Live count of remaining tasks and a "Clear completed" button
+- Persistence with `localStorage`
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 (hooks: `useState`, `useEffect`)
+- Vite
+- Oxlint (linting)
+- Plain CSS
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL printed in the terminal (usually http://localhost:5173).
+
+Other scripts:
+
+```bash
+npm run build   # production build
+npm run lint    # run the linter
+```
+
+## Project structure
+
+```
+src/
+  App.jsx   # state, task logic and UI
+  App.css   # styles
+  main.jsx  # entry point
+```
+
+## Possible improvements
+
+- Due dates and priorities
+- Drag-and-drop reordering
+- Unit tests with Vitest and React Testing Library
