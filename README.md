@@ -16,7 +16,7 @@ A simple task manager built with React. Tasks are saved in the browser, so they 
 
 - React 19 (hooks: `useState`, `useEffect`)
 - Vite
-- Oxlint (linting)
+- “ESLint (linting)”
 - Plain CSS
 
 ## Getting started
